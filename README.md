@@ -2,50 +2,92 @@ Project Overview
 
 
 This project guides you through creating a complete Dockerized Python application that connects to a PostgreSQL database. You'll learn:
+
 •	Docker fundamentals: Images, containers, Dockerfiles
+
 •	Container networking: Creating custom networks
+
 •	Multi-container applications: Python + PostgreSQL setup
+
 •	Database operations: CRUD operations with PostgreSQL
+
 •	Docker commands: Build, run, manage containers
+
 2. Prerequisites
+   
 Software Requirements:
+
 1.	Operating System:
-o	Windows 10/11 (64-bit) with WSL2 enabled
-o	macOS (Catalina 10.15 or newer)
-o	Linux (Ubuntu 18.04+, Fedora, CentOS)
-2.	Required Software:
-o	Docker Desktop (for Windows/macOS) or Docker Engine (for Linux)
-o	VS Code or any text editor
-o	Terminal/Command Prompt
-3.	Basic Knowledge:
-o	Basic Python programming
-o	Basic command line/terminal usage
-o	Fundamental database concept.
+   
+	Windows 10/11 (64-bit) with WSL2 enabled
+
+	macOS (Catalina 10.15 or newer)
+
+ Linux (Ubuntu 18.04+, Fedora, CentOS)
+ 
+3.	Required Software:
+   
+	->Docker Desktop (for Windows/macOS) or Docker Engine (for Linux)
+  	
+	->VS Code or any text editor
+  	
+	->Terminal/Command Prompt
+  	
+5.	Basic Knowledge:
+   
+->	Basic Python programming 
+
+->	Basic command line/terminal usage  
+
+->Fundamental database concept.
+
 ->  Before starting, verify your system is ready:
- docker –version  
+
+ docker –version 
+ 
  docker info
+ 
  docker run hello-world
-Project Structure
+ 
+Project Structure:
+
 We'll create two projects:
+
 Project A: Simple Python App in Docker
+
 simple-app/
 ├── app.py
 └── Dockerfile
+
+
 Project B: Python + PostgreSQL App
-text
+
+
 docker-postgres-app/
 ├── app.py
 ├── Dockerfile
+
+
+
                                         Project A: Simple Python App in Docker
+
+                                        
 Create app.py
+
 •	Create a tiny Python file that prints a message.
+
 File app.py:
+
 print("Hello from inside a Docker container!")
+
 •	This is the program the container will run. It helps verify the container works.
 
 3) Create the Dockerfile
+   
 •	Add a text file named Dockerfile (no extension) that tells Docker how to build the image.
+
 File Dockerfile:
+
 # Use the official Python image
 FROM python:3.10-slim
 
