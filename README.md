@@ -1,4 +1,6 @@
 Project Overview
+
+
 This project guides you through creating a complete Dockerized Python application that connects to a PostgreSQL database. You'll learn:
 •	Docker fundamentals: Images, containers, Dockerfiles
 •	Container networking: Creating custom networks
